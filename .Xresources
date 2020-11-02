@@ -1,0 +1,126 @@
+xterm*faceName: Iosevka Etoile
+xterm*faceSize: 12
+xterm*renderFont: true
+xterm*termName: xterm-256color
+!TomorrowNight
+#define t_background        #100002
+#define t_current_line      #282a2e
+#define t_selection       #373b41
+#define t_foreground       #c5c8c6
+#define t_comment       #969896
+#define t_red        #cc6666
+#define t_orange       #de935f
+#define t_yellow         #f0c674
+#define t_green          #b5bd68
+#define t_aqua          #8abeb7
+#define t_blue          #81a2be
+#define t_purple         #b294bb
+
+
+xterm*foreground:   t_foreground
+xterm*background:   t_background
+xterm*cursorColor:  #aeafad
+
+! Black / Grey
+xterm*color0:       #000000
+xterm*color8:       #666666
+
+! Red / Bright Red
+xterm*color1:       t_red
+xterm*color9:       #FF3334
+
+! Green + Bright Green
+xterm*color2:       t_green
+xterm*color10:      #9ec400
+
+! Yellow (Orange) + Bright Yellow (Yellow)
+xterm*color3:       t_orange
+xterm*color11:      t_yellow
+
+! Blue + Bright Blue
+xterm*color4:       t_blue
+xterm*color12:      t_blue
+
+! Magenta (Purple) + Bright Magenta
+xterm*color5:       t_purple
+xterm*color13:      #b777e0
+
+! Cyan (Aqua) + Bright Cyan
+xterm*color6:       t_aqua
+xterm*color14:      #54ced6
+
+! Light Grey (Selection) + White (Current Line)
+xterm*color7:       t_selection
+xterm*color15:      t_current_line
+
+
+
+!! URxvt Appearance
+URxvt.font: xft:Iosevka Etoile
+URxvt.boldFont: xft:Iosevka Etoile
+URxvt.italicFont: xft:Iosevka Etoile
+URxvt.boldItalicfont: xft:Iosevka Etoile
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+!URxvt.geometry: 92x24
+!URxvt.internalBorder: 24
+URxvt.cursorBlink: false
+URxvt.cursorUnderline: true
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+!TomorrowNight
+#define t_background        #181818
+#define t_current_line      #282a2e
+#define t_selection       #373b41
+#define t_foreground       #c5c8c6
+#define t_comment       #969896
+#define t_red        #cc6666
+#define t_orange       #de935f
+#define t_yellow         #f0c674
+#define t_green          #b5bd68
+#define t_aqua          #8abeb7
+#define t_blue          #81a2be
+#define t_purple         #b294bb
+
+
+urxvt*foreground:   t_foreground
+urxvt*background:   t_background
+urxvt*cursorColor:  #aeafad
+
+! Black / Grey
+urxvt*color0:       #000000
+urxvt*color8:       #666666
+
+! Red / Bright Red
+urxvt*color1:       t_red
+urxvt*color9:       #FF3334
+
+! Green + Bright Green
+urxvt*color2:       t_green
+urxvt*color10:      #9ec400
+
+! Yellow (Orange) + Bright Yellow (Yellow)
+urxvt*color3:       t_orange
+urxvt*color11:      t_yellow
+
+! Blue + Bright Blue
+urxvt*color4:       t_blue
+urxvt*color12:      t_blue
+
+! Magenta (Purple) + Bright Magenta
+urxvt*color5:       t_purple
+urxvt*color13:      #b777e0
+
+! Cyan (Aqua) + Bright Cyan
+urxvt*color6:       t_aqua
+urxvt*color14:      #54ced6
+
+! Light Grey (Selection) + White (Current Line)
+urxvt*color7:       t_selection
+urxvt*color15:      t_current_line
+
+
