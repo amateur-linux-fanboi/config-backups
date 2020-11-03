@@ -17,10 +17,10 @@ nnoremap <Right> : echoe "Use l"<CR>
 
 
 "In insert mode
-"inoremap <Left>	 : echoe "Use h"<CR>
-"inoremap <Down>	 : echoe "Use j"<CR>
-"inoremap <Up>	 : echoe "Use k"<CR>
-"inoremap <Right> : echoe "Use l"<CR>
+inoremap <Left>	:<ESC> echoe "Use h"<CR>
+inoremap <Down>	: <ESC> echoe "Use j"<CR>
+inoremap <Up> 	: <ESC> echoe "Use k"<CR>
+inoremap <Right>	: <ESC> echoe "Use l"<CR>
 
 
 
@@ -71,13 +71,10 @@ inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]
 
 
 
-
 " For quotation marks 
 inoremap " ""<left>
-
-
-
-
+inoremap <expr> "  strpart(getline('.'), col('.')-1, 1) == '"' ? "\<Right>" : '"'
+inoremap "<BS> <NOP>
 
 " LaTeX Specific stuff
 
