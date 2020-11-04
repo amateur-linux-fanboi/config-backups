@@ -10,17 +10,17 @@ set incsearch
 
 "Some mild irritation to get used to vim bindings
 "In normal mode
-nnoremap <Left>	 : echoe "Use h"<CR>
-nnoremap <Down>	 : echoe "Use j"<CR>
-nnoremap <Up>	 : echoe "Use k"<CR>
-nnoremap <Right> : echoe "Use l"<CR>
+nnoremap <Left>	 :echoe "Use h"<CR>
+nnoremap <Down>	 :echoe "Use j"<CR>
+nnoremap <Up>	 :echoe "Use k"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
 
 
 "In insert mode
-inoremap <Left>	:<ESC> echoe "Use h"<CR>
-inoremap <Down>	: <ESC> echoe "Use j"<CR>
-inoremap <Up> 	: <ESC> echoe "Use k"<CR>
-inoremap <Right>	: <ESC> echoe "Use l"<CR>
+inoremap <Left>	<ESC>:echoe "Use h"<CR>
+inoremap <Down>	 <ESC>:echoe "Use j"<CR>
+inoremap <Up> 	 <ESC>:echoe "Use k"<CR>
+inoremap <Right>	 <ESC>:echoe "Use l"<CR>
 
 
 

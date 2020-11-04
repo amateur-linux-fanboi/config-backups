@@ -141,10 +141,11 @@ rsync -avh /mnt/Gray\ Terminal/Research\ Work/ /media/raghu/Re/Research\ Work/ ;
 rsync -avh /mnt/Gray\ Terminal/KerasPrac /media/raghu/Re/ ;\
 rsync -avh /mnt/Gray\ Terminal/Finance/ /media/raghu/Re/Finance/ ;\
 rsync -avh /mnt/Gray\ Terminal/Lists/ /media/raghu/Re/Lists/ ;\
+rsync -avh /mnt/Gray\ Terminal/Notes/ /media/raghu/Re/Notes/ ;\
 rsync -avh /mnt/Gray\ Terminal/C\ ProgPrac /media/raghu/Re/C\ ProgPrac'
 
 # Update and upgrade
-alias upandup='sudo apt-get update && sudo apt-get upgrade; notify-send "Updates Done" "Your computer is supposed to be up to date!"'
+alias upandup='sudo apt-get update && sudo apt-get upgrade; notify-send "Updates Done" "Your computer is supposed to be up to date!" -u normal -t 20000'
 
 # I don't think I'll use this anymore the vim in the repo is good enough for me.
 # Vim Flatpak

@@ -1,4 +1,4 @@
-xterm*faceName: Iosevka Etoile
+xterm*faceName: Go Mono
 xterm*faceSize: 12
 xterm*renderFont: true
 xterm*termName: xterm-256color
@@ -53,6 +53,12 @@ xterm*color14:      #54ced6
 xterm*color7:       t_selection
 xterm*color15:      t_current_line
 
+
+! Font scaling shortcuts
+xterm*VT100.Translations: #override \
+    Ctrl <Key> minus: smaller-vt-font() \n\
+    Ctrl <Key> plus: larger-vt-font() \n\
+    Ctrl <Key> 0: set-vt-font(d)
 
 
 !! URxvt Appearance
