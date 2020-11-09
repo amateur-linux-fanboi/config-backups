@@ -27,8 +27,7 @@ font pango:IBM Plex Mono 11
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # MY own lock combo
-bindsym --release $mod+Ctrl+l exec i3lock -e -t --image=/home/raghu/Pictures/Penguin_rainbow.png
-
+bindsym --release $mod+Ctrl+l exec i3lock -e -t --image=/home/raghu/Pictures/Steampunk_resized.png
 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -54,9 +53,11 @@ bindsym $mod+Shift+Return exec urxvt #i3-sensible-terminal
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -b -nf '#FFFFFF' -nb '#000000' -sb '#FFFFFF' -sf '#000000' -fn "Oldania ADF Std-17" -p 'Run:::'
-bindsym --release $mod exec dmenu_run -b -nf '#FFFFFF' -nb '#000000' -sb '#FFFFFF' -sf '#000000' -fn "Oldania ADF Std-17" -p 'Run:::'
-#I don't think the font selection is working, but otherwise, it's fine.
+bindsym $mod+d exec dmenu_run -b -nf '#FEFEE7' -nb '#251202' -sb '#FEFEE7' -sf '#251202' -fn "Oldania ADF Std-17" -p 'Run:::'
+
+
+
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -186,17 +187,28 @@ bindsym $mod+r mode "resize"
 
 
 # class                 border  bground text    indicator child_border
-client.focused          #D5E00C #D5E00C #000000 #FFFFFF   #4CA2E3
-client.focused_inactive #775711 #775711 #FFFFFF #FFFFFF   #5F676A
-client.unfocused        #888888 #888888 #000000 #FFFFFF   #222222
-client.urgent           #FF0000 #FF0000 #000000 #FFFFFF   #900000
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.focused          #A28B82 #D68834 #FEFFE7 #D68834   #DF6637
+client.focused_inactive #A28B82 #8A3324 #FEFFE7 #8A3324   #7D2D3D
+client.unfocused        #A28B82 #C09572 #371C03 #C09572   #7D2D3D
+client.urgent           #A28B82 #B7093A #FEFFE7 #B7093A   #B7093A
+client.placeholder      #A28B82 #0C0C0C #FEFFE7 #000000   #7D2D3D
 
-client.background       #131010
+client.background       #371C03
+
+
+# Old Colours
+## class                 border  bground text    indicator child_border
+#client.focused          #D5E00C #D5E00C #000000 #FFFFFF   #4CA2E3
+#client.focused_inactive #775711 #775711 #FFFFFF #FFFFFF   #5F676A
+#client.unfocused        #888888 #888888 #000000 #FFFFFF   #222222
+#client.urgent           #FF0000 #FF0000 #000000 #FFFFFF   #900000
+#client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+#
+#client.background       #131010
 
 
 
-hide_edge_borders both
+#hide_edge_borders both
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -210,42 +222,33 @@ bar {
 	position top 
 	separator_symbol "||"
 	colors {
-		    background #010101
-		    statusline #00FFFF
-		    separator  #D4AF37
-#					Border 	Bg	Text
+	    background #251302
+	    statusline #FFEEF7
+	    separator  #D68834
 
-		    focused_workspace  #BEBEBE #010101 #DEDEDE
-		    active_workspace   #BEBEBE #FACBFF #000000
-		    inactive_workspace #BEBEBE #BEBEBE #000000
-		    urgent_workspace   #BEBEBE #900000 #FFFFFF
-		    binding_mode       #BEBEBE #900000 #FFFFFF
+	      focused_workspace  #D68834 #D68834 #FEFFE7
+	      active_workspace   #8A3324 #8A3324 #FEFFE7
+	      inactive_workspace #371C03 #DF6637 #371C03
+	      urgent_workspace   #2F343A #B7093A #FEFFE7
+	      binding_mode       #2F343A #B7093A #FEFFE7
 
-## The Former colours
-#		    focused_workspace  #44475A #44475A #F8F8F2
-#		    active_workspace   #282A36 #44475A #F8F8F2
-#		    inactive_workspace #282A36 #282A36 #BFBFBF
-#		    urgent_workspace   #FF5555 #FF5555 #F8F8F2
-#		    binding_mode       #FF5555 #FF5555 #F8F8F2
   }
 }
 
 
 ## Wallpaper
-exec --no-startup-id feh --bg-fill /home/raghu/Pictures/Keyboard_Wallpaper.jpg
+exec --no-startup-id feh --bg-fill /home/raghu/Pictures/Inkscape\ Export/SteampunkWall.png
 
 
 ## Workspace layout default
-workspace_layout tabbed
+workspace_layout default
 
 ## Let's see if I can make windows go to specific worspaces
 
 assign [class="Firefox"]  2
-assign [class="spotify"]  9
 
 ## Sideways shifting between workspaces
 bindsym $mod+Shift+n workspace next
-bindsym $mod+Shift+Tab workspace next
 bindsym $mod+Shift+b workspace prev
 
 
@@ -279,5 +282,5 @@ title_align center
 
 # Disabling window borders
 
-for_window [class="^.*"] border none
+for_window [class="^.*"] border pixel 3
 
