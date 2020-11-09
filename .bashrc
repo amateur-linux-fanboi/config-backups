@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1=' \033[96m[\t] \[\033[01;32m\]\h\n    \$\[\033[00m\] '
+    PS1=' \033[96m[\t] \[\033[01;32m\]\h\n \[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -67,7 +67,7 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    PS1=' \033[96m[\t] \[\033[01;32m\]\h\n    \$\[\033[00m\] '
+    PS1=' \[\033[1;36m\][\t] \[\033[01;35m\]\h\n	\[\033[1;36m\]♠♣\[\033[1;31m\]♦♥\[\033[00m\] '
     ;;
 *)
     ;;
@@ -167,4 +167,4 @@ alias lt='ls -t'
 
 #Setting the cursor to a blinking underline, for the sake of xterm
 echo -e -n "\x1b[\x34 q" # changes to steady underline
-neofetch
+#neofetch

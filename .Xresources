@@ -3,7 +3,7 @@ xterm*faceSize: 12
 xterm*renderFont: true
 xterm*termName: xterm-256color
 !TomorrowNight
-#define t_background        #100002
+#define t_background        #110700
 #define t_current_line      #282a2e
 #define t_selection       #373b41
 #define t_foreground       #c5c8c6
@@ -78,19 +78,6 @@ URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
-!TomorrowNight
-#define t_background        #181818
-#define t_current_line      #282a2e
-#define t_selection       #373b41
-#define t_foreground       #c5c8c6
-#define t_comment       #969896
-#define t_red        #cc6666
-#define t_orange       #de935f
-#define t_yellow         #f0c674
-#define t_green          #b5bd68
-#define t_aqua          #8abeb7
-#define t_blue          #81a2be
-#define t_purple         #b294bb
 
 
 urxvt*foreground:   t_foreground
