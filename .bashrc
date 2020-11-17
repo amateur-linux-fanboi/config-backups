@@ -57,7 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1=' \033[96m[\t] \[\033[01;32m\]\h\n \[\033[00m\] '
+   # PS1=' \033[96m[\t] \[\033[01;32m\]\h\n \[\033[00m\] '
+    PS1='\n \[\033[1;36m\][\t] \[\033[01;35m\]\h\n    \[\033[1;36m\]♠♣\[\033[1;31m\]♦♥\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -67,7 +68,7 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    PS1=' \[\033[1;36m\][\t] \[\033[01;35m\]\h\n	\[\033[1;36m\]♠♣\[\033[1;31m\]♦♥\[\033[00m\] '
+    PS1='\n \[\033[1;36m\][\t] \[\033[01;35m\]\h\n    \[\033[1;36m\]♠♣\[\033[1;31m\]♦♥\[\033[00m\] '
     ;;
 *)
     ;;
@@ -163,6 +164,10 @@ alias speedofboot='echo $(date +%Y%m%d_%H:%M:%S) " " $(systemd-analyze | grep =|
 
 # An ls alias for 'ls -t', since, as of 16:23, 25/10/2020, I thought I use the option enough to warrant the creation of an alias
 alias lt='ls -t'
+
+
+# A simple implementation of Pomodoro Technique, I think.
+alias pomo='sleep 25m; notify-send -u critical -t 30000 "Break time!"'
 #####################################
 
 #Setting the cursor to a blinking underline, for the sake of xterm

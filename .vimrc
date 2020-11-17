@@ -8,6 +8,15 @@ set numberwidth=4
 set smartcase
 set incsearch
 
+" To keep the caret centered while editing
+:set scrolloff=500
+nnoremap j jzz
+nnoremap k kzz
+nnoremap G Gzz
+nnoremap o o<ESC>zzi
+
+
+
 "Some mild irritation to get used to vim bindings
 "In normal mode
 nnoremap <Left>	 :echoe "Use h"<CR>
@@ -22,20 +31,27 @@ inoremap <Down>	 <ESC>:echoe "Use j"<CR>
 inoremap <Up> 	 <ESC>:echoe "Use k"<CR>
 inoremap <Right>	 <ESC>:echoe "Use l"<CR>
 
+" Window movements bound to vim bindings
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 
 
 "Orders for backspace to behave properly.
 set backspace=indent,eol,start 
 
 "Color Scheme.
-"colo atom-dark-256 	" Available at https://github.com/gosukiwi/vim-atom-dark
+colo atom-dark-256 	" Available at https://github.com/gosukiwi/vim-atom-dark
+"colo atom-dark		" Available at https://github.com/gosukiwi/vim-atom-dark
 "colo medic_chalk	" Available at https://github.com/ParamagicDev/vim-medic_chalk
-colo onehalfdark	" Available at https://github.com/sonph/onehalf/tree/master/vim
+"colo onehalfdark	" Available at https://github.com/sonph/onehalf/tree/master/vim
 
 "Switching on syntax highlights
 syntax on 	" I'll switch it off if ever I don't want it.
 
-" Spelling check (in US English)
+" Spelling check (in US English and French)
 set spell spelllang=en_us
 set spell spelllang+=fr
 
