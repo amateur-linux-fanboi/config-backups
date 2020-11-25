@@ -27,7 +27,7 @@ font pango:IBM Plex Mono 11
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # MY own lock combo
-bindsym --release $mod+Ctrl+l exec i3lock -e -t --image=/home/raghu/Pictures/Steampunk_resized.png
+bindsym --release $mod+Ctrl+l exec i3lock -e -t --image=/home/raghu/Pictures/SteampunkBlue_resized.png
 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -45,15 +45,15 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm #i3-sensible-terminal
-bindsym $mod+Shift+Return exec urxvt #i3-sensible-terminal
+bindsym $mod+Shift+Return exec xterm #i3-sensible-terminal
+bindsym $mod+Return exec urxvt #i3-sensible-terminal
 
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -b -nf '#FEFEE7' -nb '#251202' -sb '#FEFEE7' -sf '#251202' -fn "Oldania ADF Std-17" -p 'Run:::'
+bindsym $mod+d exec dmenu_run -l 12 -b -nf '#252525' -nb '#E6E6EE' -sb '#057575' -sf '#E6E6EE' -fn "Oldania ADF Std-17" -p 'Run:::'
 
 
 
@@ -61,7 +61,7 @@ bindsym $mod+d exec dmenu_run -b -nf '#FEFEE7' -nb '#251202' -sb '#FEFEE7' -sf '
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
- bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -b -nf "#FFFFFF" -nb "#000000" -sb "#FFFFFF" -sf "#000000" -fn "Oldania ADF Std-17" -p "GUI-Run:::"'
+ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -b -nf "#E6E6EE" -nb "#000000" -sb "#E6E6EE" -sf "#000000" -fn "Oldania ADF Std-17" -p "GUI-Run:::"'
 
 # change focus
 bindsym $mod+j focus left
@@ -187,58 +187,47 @@ bindsym $mod+r mode "resize"
 
 
 # class                 border  bground text    indicator child_border
-client.focused          #A28B82 #D68834 #FEFFE7 #D68834   #DF6637
-client.focused_inactive #A28B82 #8A3324 #FEFFE7 #8A3324   #7D2D3D
-client.unfocused        #A28B82 #C09572 #371C03 #C09572   #7D2D3D
-client.urgent           #A28B82 #B7093A #FEFFE7 #B7093A   #B7093A
-client.placeholder      #A28B82 #0C0C0C #FEFFE7 #000000   #7D2D3D
+client.focused          #ECEFF4 #ECEFF4 #2E3440 #ECEFF4   #88C0D0
+client.focused_inactive #ECEFF4 #81A1C1 #2E3440 #ECEFF4   #3B4151
+client.unfocused        #ECEFF4 #81A1C1 #371C03 #ECEFF4   #3B4151
+client.urgent           #ECEFF4 #B7093A #ECEFF4 #ECEFF4   #B7093A
+client.placeholder      #ECEFF4 #0C0C0C #2E3440 #ECEFF4   #3B4151
 
-client.background       #371C03
-
-
-# Old Colours
-## class                 border  bground text    indicator child_border
-#client.focused          #D5E00C #D5E00C #000000 #FFFFFF   #4CA2E3
-#client.focused_inactive #775711 #775711 #FFFFFF #FFFFFF   #5F676A
-#client.unfocused        #888888 #888888 #000000 #FFFFFF   #222222
-#client.urgent           #FF0000 #FF0000 #000000 #FFFFFF   #900000
-#client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
-#
-#client.background       #131010
+client.background       #D8DEE9
 
 
 
-#hide_edge_borders both
+
+hide_edge_borders both
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	mode hide
-	hidden_state hide
-	modifier $mod
+#	mode hide
+#	hidden_state hide
+#	modifier $mod
         status_command i3status
 	font pango: Iosevka SS12 13
 	position top 
 	separator_symbol "||"
 	colors {
-	    background #251302
-	    statusline #FFEEF7
-	    separator  #D68834
+	    background #E6E6EE
+	    statusline #252525
+	    separator  #0034F4
 
-	      focused_workspace  #D68834 #D68834 #FEFFE7
-	      active_workspace   #8A3324 #8A3324 #FEFFE7
-	      inactive_workspace #371C03 #DF6637 #371C03
-	      urgent_workspace   #2F343A #B7093A #FEFFE7
-	      binding_mode       #2F343A #B7093A #FEFFE7
+	      focused_workspace  #EEDEDE #5E81AC #FEFFE7
+	      active_workspace   #EEDEDE #8A3324 #FEFFE7
+	      inactive_workspace #EEDEDE #434E5C #D8DEE9
+	      urgent_workspace   #EEDEDE #B7093A #FEFFE7
+	      binding_mode       #EEDEDE #B7093A #FEFFE7
 
   }
 }
 
 
 ## Wallpaper
-exec --no-startup-id feh --bg-fill /home/raghu/Pictures/Inkscape\ Export/SteampunkWall.png
-
+exec --no-startup-id feh --bg-fill /home/raghu/Pictures/Inkscape\ Export/E6E6EE.png
 
 ## Workspace layout default
 workspace_layout default
@@ -246,6 +235,9 @@ workspace_layout default
 ## Let's see if I can make windows go to specific worspaces
 
 assign [class="Firefox"]  2
+assign [class="Zathura|Evince"]  3
+assign [class="Typora"]  4
+assign [class="^Spotify"]  9
 
 ## Sideways shifting between workspaces
 bindsym $mod+Shift+n workspace next
@@ -265,14 +257,14 @@ bindsym $mod+Shift+b workspace prev
 #### Full screen
 bindsym --release Print exec --no-startup-id import -window root /home/raghu/Pictures/Screenshot$(date +%Y-%m-%d_%H%M%S).png
 
-#### Part
+#### Part screen
 bindsym --release Shift+Print exec --no-startup-id import /home/raghu/Pictures/Screenshot$(date +%Y-%m-%d_%H%M%S).png
 
 #### The temp shots
 #### Full screen
 bindsym --release Ctrl+Print exec --no-startup-id import -window root /tmp/latest-screenshot.png
 
-#### Part
+#### Part screen
 bindsym --release Ctrl+Shift+Print exec --no-startup-id import /tmp/latest-screenshot.png
 
 
@@ -284,3 +276,6 @@ title_align center
 
 for_window [class="^.*"] border pixel 3
 
+## Shutdown and reboot shortcuts
+bindsym Ctrl+Mod1+$mod+x exec shutdown now
+bindsym Ctrl+Mod1+$mod+r exec shutdown -r now
