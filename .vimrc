@@ -4,16 +4,45 @@
 set number relativenumber
 set numberwidth=4
 
+"Status line configuration
+set laststatus=2
+set statusline= 
+set statusline=\ \ \ \ %-12.24t       "tail of the filename
+set statusline+=\ \ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff}] "file format
+set statusline+=\ \ %y      "filetype
+set statusline+=\ \ %h%m%r  "help file flag
+set statusline+=%=      "left/right separator
+set statusline+=%(Col:%3c,%)      "cursor column
+set statusline+=\ \ %-18(Line:%l/%L%)   "cursor line/total lines
+set statusline+=\ %5.10P\ \ \ \     "percent through file
+
+
+"Tab indentations and stuff
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
 "For convenient search
 set smartcase
 set incsearch
+
+" Highlight the row and column where the cursor is
+set cursorline
+
+" Colours setup
+"set t_Co=256
+set background=light
+"set background=dark
+
 
 " To keep the caret centered while editing
 :set scrolloff=500
 nnoremap j jzz
 nnoremap k kzz
 nnoremap G Gzz
-nnoremap o o<ESC>zzi
 
 
 
@@ -43,10 +72,23 @@ nnoremap <C-H> <C-W><C-H>
 set backspace=indent,eol,start 
 
 "Color Scheme.
-colo atom-dark-256 	" Available at https://github.com/gosukiwi/vim-atom-dark
+"colo atom-dark-256 	" Available at https://github.com/gosukiwi/vim-atom-dark
 "colo atom-dark		" Available at https://github.com/gosukiwi/vim-atom-dark
 "colo medic_chalk	" Available at https://github.com/ParamagicDev/vim-medic_chalk
 "colo onehalfdark	" Available at https://github.com/sonph/onehalf/tree/master/vim
+"colo onehalflight	" Available at https://github.com/sonph/onehalf/tree/master/vim
+"colo gruvbox		" Available at https://github.com/morhetz/gruvbox
+"colo OecanicNextLight	" Available at https://github.com/mhartington/oceanic-next
+"colo OecanicNextDark	" Available at https://github.com/mhartington/oceanic-next
+"colo one 		" Available at https://github.com/rakr/vim-one/tree/master/colors
+colo envy 		" Available at https://github.com/kkga/vim-envy
+"colo typewriter	" Available at https://github.com/logico/typewriter
+"colo typewriter-night	" Available at https://github.com/logico/typewriter
+"colo paper 		" Available at https://github.com/equt/paper.vim/blob/master/colors/paper.vim
+"colo amber 		" Available at https://github.com/foxbunny/vim-amber
+"colo petra 		" Available at https://github.com/mipmip/vim-petra
+
+
 
 "Switching on syntax highlights
 syntax on 	" I'll switch it off if ever I don't want it.

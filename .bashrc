@@ -58,7 +58,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
    # PS1=' \033[96m[\t] \[\033[01;32m\]\h\n \[\033[00m\] '
-    PS1='\n \[\033[1;36m\][\t] \[\033[01;35m\]\h\n    \[\033[1;36m\]♠♣\[\033[1;31m\]♦♥\[\033[00m\] '
+    PS1='\n \[\033[1;36m\][\t] \[\033[01;35m\]\h\n  [\#]  \[\033[1;36m\]♠♣\[\033[1;31m\]♦♥\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -68,7 +68,7 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    PS1='\n \[\033[1;36m\][\t] \[\033[01;35m\]\h\n    \[\033[1;36m\]♠♣\[\033[1;31m\]♦♥\[\033[00m\] '
+    PS1='\n \[\033[1;31m\][\t, \d] \[\033[01;35m\]\h\n [\#]   \[\033[1;31m\]♠♣♦♥\[\033[00m\] '
     ;;
 *)
     ;;
@@ -157,7 +157,7 @@ alias clearflash='clear;neofetch'
 
 #shortcuts for 13 configs. Seems like I'll be visiting them a lot for some time.
 alias confi='vim /home/raghu/.config/i3/config'
-alias confs='sudo vim /etc/i3status.conf'
+alias confs='vim /home/raghu/.config/i3status/config'
 
 # A little setup to keep a record of boot times.
 alias speedofboot='echo $(date +%Y%m%d_%H:%M:%S) " " $(systemd-analyze | grep =| cut -d'=' -f2) >>/home/raghu/Documents/Boot_Time.txt'
@@ -171,5 +171,5 @@ alias pomo='sleep 25m; notify-send -u critical -t 30000 "Break time!"'
 #####################################
 
 #Setting the cursor to a blinking underline, for the sake of xterm
-echo -e -n "\x1b[\x34 q" # changes to steady underline
+echo -e -n "\t\x1b[\x32 q" # changes to steady underline
 #neofetch

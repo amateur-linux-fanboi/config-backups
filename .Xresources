@@ -1,5 +1,5 @@
-xterm*faceName: Go Mono
-xterm*faceSize: 12
+xterm*faceName: Iosevka
+xterm*faceSize: 14
 xterm*renderFont: true
 xterm*termName: xterm-256color
 !TomorrowNight
@@ -62,14 +62,15 @@ xterm*VT100.Translations: #override \
 
 
 !! URxvt Appearance
-URxvt.font: xft:Iosevka Etoile
-URxvt.boldFont: xft:Iosevka Etoile
-URxvt.italicFont: xft:Iosevka Etoile
-URxvt.boldItalicfont: xft:Iosevka Etoile
+URxvt.font: xft:Iosevka Etoile:size=12, xft:Noto Mono:size=12
+URxvt.boldFont: xft:Iosevka Etoile:size=12
+URxvt.italicFont: xft:Iosevka Etoile:size=12
+URxvt.boldItalicfont: xft:Iosevka Etoile:size=12
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 !URxvt.geometry: 92x24
-!URxvt.internalBorder: 24
+URxvt.internalBorder: 6
+URxvt.externalBorder: 0
 URxvt.cursorBlink: false
 URxvt.cursorUnderline: true
 URxvt.saveline: 2048
@@ -77,43 +78,77 @@ URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
-URxvt.iso14755: false
+URxvt.iso14755: true
 
+! Typewriter light
+! Scheme: Typewriter (https://github.com/logico-dev)
+! Based on: Alexandre Gavioli (https://github.com/Alexx2/)
 
-urxvt*foreground:   t_foreground
-urxvt*background:   t_background
-urxvt*cursorColor:  #aeafad
+#define base00 #E7E7EE
+#define base01 #e3e3e3
+#define base02 #00BAFF
+#define base03 #ababab
+#define base04 #525252
+#define base05 #262626
+#define base06 #252525
+#define base07 #101010
+#define base08 #7c7c7c
+#define base09 #999999
+#define base0A #a0a0a0
+#define base0B #8e8e8e
+#define base0C #868686
+#define base0D #686868
+#define base0E #747474
+#define base0F #5e5e5e
+#define base0G #E41D91
+#define base0H #009900
 
-! Black / Grey
-urxvt*color0:       #000000
-urxvt*color8:       #666666
+urxvt.foreground:   base05
+#ifdef background_opacity
+urxvt.background:   [background_opacity]base00
+#else
+urxvt.background:   base00
+#endif
+urxvt.cursorColor:  base02
 
-! Red / Bright Red
-urxvt*color1:       t_red
-urxvt*color9:       #FF3334
+! Black
+urxvt.color0:       base00
+urxvt.color8:       base0A
 
-! Green + Bright Green
-urxvt*color2:       t_green
-urxvt*color10:      #9ec400
+! Red
+urxvt.color1:       base08
+urxvt.color9:       base08
 
-! Yellow (Orange) + Bright Yellow (Yellow)
-urxvt*color3:       t_orange
-urxvt*color11:      t_yellow
+! Green
+urxvt.color2:       base05
+urxvt.color10:      base0B
 
-! Blue + Bright Blue
-urxvt*color4:       t_blue
-urxvt*color12:      t_blue
+! Yellow
+urxvt.color3:       base0A
+urxvt.color11:      base0G
 
-! Magenta (Purple) + Bright Magenta
-urxvt*color5:       t_purple
-urxvt*color13:      #b777e0
+! Blue
+urxvt.color4:       base0D
+urxvt.color12:      base0D
 
-! Cyan (Aqua) + Bright Cyan
-urxvt*color6:       t_aqua
-urxvt*color14:      #54ced6
+! Magenta
+urxvt.color5:       base0E
+urxvt.color13:      base0H
 
-! Light Grey (Selection) + White (Current Line)
-urxvt*color7:       t_selection
-urxvt*color15:      t_current_line
+! Cyan
+urxvt.color6:       base0C
+urxvt.color14:      base02
 
+! White
+urxvt.color7:       base05
+urxvt.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+urxvt.color16:      base09
+urxvt.color17:      base0F
+urxvt.color18:      base01
+urxvt.color19:      base02
+urxvt.color20:      base04
+urxvt.color21:      base06
 
