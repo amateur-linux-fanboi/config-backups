@@ -13,6 +13,7 @@ set statusline+=%{&ff}] "file format
 set statusline+=\ \ %y      "filetype
 set statusline+=\ \ %h%m%r  "help file flag
 set statusline+=%=      "left/right separator
+set statusline+=\ \ %B\ \ 
 set statusline+=%(Col:%3c,%)      "cursor column
 set statusline+=\ \ %-18(Line:%l/%L%)   "cursor line/total lines
 set statusline+=\ %5.10P\ \ \ \     "percent through file
@@ -26,8 +27,8 @@ set softtabstop=4
 set expandtab
 
 "For convenient search
-set smartcase
 set incsearch
+set ignorecase
 
 " Highlight the row and column where the cursor is
 set cursorline

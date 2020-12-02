@@ -62,10 +62,10 @@ xterm*VT100.Translations: #override \
 
 
 !! URxvt Appearance
-URxvt.font: xft:Iosevka Etoile:size=12, xft:Noto Mono:size=12
-URxvt.boldFont: xft:Iosevka Etoile:size=12
-URxvt.italicFont: xft:Iosevka Etoile:size=12
-URxvt.boldItalicfont: xft:Iosevka Etoile:size=12
+URxvt.font: xft:IBM Plex Mono:size=13, xft:Noto Mono:size=13, xft:Noto Color Emoji:size=10
+URxvt.boldFont: xft:IBM Plex Mono:size=13
+URxvt.italicFont: xft:IBM Plex Mono:size=13
+URxvt.boldItalicfont: xft:IBM Plex Mono:size=13
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 !URxvt.geometry: 92x24
@@ -103,13 +103,18 @@ URxvt.iso14755: true
 #define base0G #E41D91
 #define base0H #009900
 
-urxvt.foreground:   base05
-#ifdef background_opacity
-urxvt.background:   [background_opacity]base00
-#else
-urxvt.background:   base00
-#endif
-urxvt.cursorColor:  base02
+!urxvt.foreground:   base05
+!#ifdef background_opacity
+!urxvt.background:   [background_opacity]base00
+!#else
+!urxvt.background:   base00
+!#endif
+!urxvt.cursorColor:  base02
+
+
+urxvt.foreground:#0F0F0F
+urxvt.background:#F0E3E1
+urxvt.cursorColor:#DD66AA
 
 ! Black
 urxvt.color0:       base00

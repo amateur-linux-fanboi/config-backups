@@ -58,7 +58,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
    # PS1=' \033[96m[\t] \[\033[01;32m\]\h\n \[\033[00m\] '
-    PS1='\n \[\033[1;36m\][\t] \[\033[01;35m\]\h\n  [\#]  \[\033[1;36m\]♠♣\[\033[1;31m\]♦♥\[\033[00m\] '
+    PS1='\n \[\033[1;36m\][\t] \[\033[01;35m\]\h\n  [\#]  \[\033[1;36m\]Boo\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -68,7 +68,7 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    PS1='\n \[\033[1;31m\][\t, \d] \[\033[01;35m\]\h\n [\#]   \[\033[1;31m\]♠♣♦♥\[\033[00m\] '
+    PS1='\n \[\033[1;31m\][\t, \d] \[\033[01;35m\]\h\n [\#]   \[\033[1;31m\]&>>\[\033[00m\] '
     ;;
 *)
     ;;
@@ -160,7 +160,7 @@ alias confi='vim /home/raghu/.config/i3/config'
 alias confs='vim /home/raghu/.config/i3status/config'
 
 # A little setup to keep a record of boot times.
-alias speedofboot='echo $(date +%Y%m%d_%H:%M:%S) " " $(systemd-analyze | grep =| cut -d'=' -f2) >>/home/raghu/Documents/Boot_Time.txt'
+alias speedofboot='echo $(date +%Y%m%d_)$(who -b | awk '"'"'{print $4}'"'"' ) " " $(systemd-analyze | grep =| cut -d'=' -f2) >>/home/raghu/Documents/Boot_Time.txt'
 
 # An ls alias for 'ls -t', since, as of 16:23, 25/10/2020, I thought I use the option enough to warrant the creation of an alias
 alias lt='ls -t'
