@@ -24,10 +24,11 @@ font pango:IBM Plex Mono 11
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -e -t --image=/home/raghu/Pictures/Inkscape\ Export/Coffee_Cup_Lappy_Lock_Screen.png
+
 
 # MY own lock combo
-bindsym --release $mod+Ctrl+l exec i3lock -e -t --image=/home/raghu/Pictures/SteampunkBlue_resized.png
+bindsym --release $mod+Ctrl+l exec i3lock -e -t --image=/home/raghu/Pictures/ThinkIBM.jpg
 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -63,11 +64,13 @@ bindsym $mod+d exec dmenu_run -l 12 -b -nf '#252525' -nb '#E6E6EE' -sb '#057575'
 # installed.
  bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -b -nf "#E6E6EE" -nb "#000000" -sb "#E6E6EE" -sf "#000000" -fn "Oldania ADF Std-17" -p "GUI-Run:::"'
 
+
+
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 bindsym $mod+Tab focus right
  
 # alternatively, you can use the cursor keys:
@@ -77,10 +80,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -89,7 +92,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+v split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -116,16 +119,18 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+
+set $ws1 "1:더미널" 
+set $ws2 "2:인터넷"
+set $ws3 "3:몬서"
+set $ws4 "4:벤"
+set $ws5 "5:🤷🏿‍♂️"
+set $ws6 "6:📁"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws9 "9:😨"
+set $ws10 "10:😱"
+
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -186,12 +191,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
+# Colour Scheme
 # class                 border  bground text    indicator child_border
-client.focused          #ECEFF4 #ECEFF4 #2E3440 #ECEFF4   #88C0D0
-client.focused_inactive #ECEFF4 #81A1C1 #2E3440 #ECEFF4   #3B4151
-client.unfocused        #ECEFF4 #81A1C1 #371C03 #ECEFF4   #3B4151
-client.urgent           #ECEFF4 #B7093A #ECEFF4 #ECEFF4   #B7093A
-client.placeholder      #ECEFF4 #0C0C0C #2E3440 #ECEFF4   #3B4151
+client.focused          #E7E7EE #E7E7EE #2E3440 #E7E7EE   #88C0D0
+client.focused_inactive #E7E7EE #81A1C1 #2E3440 #E7E7EE   #3B4151
+client.unfocused        #E7E7EE #81A1C1 #371C03 #E7E7EE   #3B4151
+client.urgent           #E7E7EE #B7093A #E7E7EE #E7E7EE   #B7093A
+client.placeholder      #E7E7EE #0C0C0C #2E3440 #E7E7EE   #3B4151
 
 client.background       #D8DEE9
 
@@ -204,40 +210,44 @@ hide_edge_borders both
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-#	mode hide
-#	hidden_state hide
-#	modifier $mod
-        status_command i3status
-	font pango: Iosevka SS12 13
+	mode hide
+	hidden_state hide
+	modifier $mod
+    status_command i3status
+	font pango: IBM Plex Mono 13
 	position top 
 	separator_symbol "||"
+    strip_workspace_numbers yes
+    strip_workspace_name no
 	colors {
-	    background #E6E6EE
+	    background #D9D9D9
 	    statusline #252525
 	    separator  #0034F4
 
-	      focused_workspace  #EEDEDE #5E81AC #FEFFE7
-	      active_workspace   #EEDEDE #8A3324 #FEFFE7
+	      focused_workspace  #EEDEDE #F0F0F9 #252525
+	      active_workspace   #EEDEDE #8A3324 #252525
 	      inactive_workspace #EEDEDE #434E5C #D8DEE9
-	      urgent_workspace   #EEDEDE #B7093A #FEFFE7
-	      binding_mode       #EEDEDE #B7093A #FEFFE7
+	      urgent_workspace   #EEDEDE #B7093A #252525
+	      binding_mode       #EEDEDE #B7093A #252525
 
   }
 }
 
 
 ## Wallpaper
-exec --no-startup-id feh --bg-fill /home/raghu/Pictures/Inkscape\ Export/E6E6EE.png
+exec --no-startup-id feh --bg-fill /home/raghu/Pictures/Inkscape\ Export/Coffee\ Mug_2.png
 
 ## Workspace layout default
 workspace_layout default
 
 ## Let's see if I can make windows go to specific worspaces
 
-assign [class="Firefox"]  2
-assign [class="Zathura|Evince"]  3
-assign [class="Typora"]  4
-assign [class="^Spotify"]  9
+assign [class="URxvt"]  $ws1
+assign [class="Firefox"]  $ws2
+assign [class="Zathura|Evince"]  $ws3
+assign [class="Typora"]  $ws4
+assign [class="Spotify Premium"]  $ws9
+
 
 ## Sideways shifting between workspaces
 bindsym $mod+Shift+n workspace next
@@ -279,3 +289,9 @@ for_window [class="^.*"] border pixel 3
 ## Shutdown and reboot shortcuts
 bindsym Ctrl+Mod1+$mod+x exec shutdown now
 bindsym Ctrl+Mod1+$mod+r exec shutdown -r now
+
+
+# Setting keyboard to US altgr-intl. (Until I figure out what's wrong with the Xorg configuration)
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl 
+exec --no-startup-id setxkbmap -option lv3:ralt_alt
+exec --no-startup-id setxkbmap -option lv3:lalt_shift
