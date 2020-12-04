@@ -7,16 +7,16 @@ set numberwidth=4
 "Status line configuration
 set laststatus=2
 set statusline= 
-set statusline=\ \ \ \ %-12.24t       "tail of the filename
-set statusline+=\ \ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}] "file format
-set statusline+=\ \ %y      "filetype
-set statusline+=\ \ %h%m%r  "help file flag
-set statusline+=%=      "left/right separator
+set statusline=\ \ \ \ %-12.24t                          "tail of the filename
+set statusline+=\ \ [%{strlen(&fenc)?&fenc:'none'},      "file encoding
+set statusline+=%{&ff}]                                  "file format
+set statusline+=\ \ %y                                   "filetype
+set statusline+=\ \ %h%m%r                               "help file flag
+set statusline+=%=                                       "left/right separator
 set statusline+=\ \ %B\ \ 
-set statusline+=%(Col:%3c,%)      "cursor column
-set statusline+=\ \ %-18(Line:%l/%L%)   "cursor line/total lines
-set statusline+=\ %5.10P\ \ \ \     "percent through file
+set statusline+=%(Col:%3c,%)                             "cursor column
+set statusline+=\ \ %-18(Line:%l/%L%)                    "cursor line/total lines
+set statusline+=\ %5.10P\ \ \ \                          "percent through file
 
 
 "Tab indentations and stuff
@@ -32,11 +32,10 @@ set ignorecase
 
 " Highlight the row and column where the cursor is
 set cursorline
+set cursorcolumn
 
 " Colours setup
-"set t_Co=256
 set background=light
-"set background=dark
 
 
 " To keep the caret centered while editing
@@ -72,7 +71,7 @@ nnoremap <C-H> <C-W><C-H>
 "Orders for backspace to behave properly.
 set backspace=indent,eol,start 
 
-"Color Scheme.
+"Colour Scheme.
 "colo atom-dark-256 	" Available at https://github.com/gosukiwi/vim-atom-dark
 "colo atom-dark		" Available at https://github.com/gosukiwi/vim-atom-dark
 "colo medic_chalk	" Available at https://github.com/ParamagicDev/vim-medic_chalk
@@ -82,13 +81,13 @@ set backspace=indent,eol,start
 "colo OecanicNextLight	" Available at https://github.com/mhartington/oceanic-next
 "colo OecanicNextDark	" Available at https://github.com/mhartington/oceanic-next
 "colo one 		" Available at https://github.com/rakr/vim-one/tree/master/colors
-colo envy 		" Available at https://github.com/kkga/vim-envy
+"colo envy 		" Available at https://github.com/kkga/vim-envy
 "colo typewriter	" Available at https://github.com/logico/typewriter
 "colo typewriter-night	" Available at https://github.com/logico/typewriter
 "colo paper 		" Available at https://github.com/equt/paper.vim/blob/master/colors/paper.vim
 "colo amber 		" Available at https://github.com/foxbunny/vim-amber
 "colo petra 		" Available at https://github.com/mipmip/vim-petra
-
+colo Rosalind       " Available at https://github.com/amateur-linux-fanboi/config-backups/tree/main/colours
 
 
 "Switching on syntax highlights
