@@ -68,7 +68,8 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    PS1='\n \[\033[1;37m\][\t, \d] \[\033[01;36m\]\h\n \[\033[1;31m\][\#]   \[\033[1;32m\]&>>\[\033[00m\] '
+    PS1='\n \[\033[1;37m\][\t, \d] \[\033[01;36m\]\h\n \[\033[1;31m\][\#]   \[\033[1;32m\]Взять себя в руки  >>>\[\033[00m\] '
+ 
     ;;
 *)
     ;;
