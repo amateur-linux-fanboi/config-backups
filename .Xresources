@@ -132,7 +132,7 @@ URxvt.iso14755: true
 
 
 urxvt.foreground:#1B1B1B
-urxvt.background:#FFEFEF
+urxvt.background:#FFF0F0
 urxvt.cursorColor:#DD66AA
 
 ! Black
