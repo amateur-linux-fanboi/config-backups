@@ -24,7 +24,7 @@ let g:colors_name = 'Rosalind'
 
 set t_Co=256
 
-hi Normal                   ctermbg=230         ctermfg=233         guifg=NONE     guibg=NONE
+hi Normal                   ctermbg=225         ctermfg=233         guifg=NONE     guibg=NONE
 hi Comment                  ctermbg=NONE        ctermfg=242         guifg=NONE     guibg=NONE
 hi Special                  ctermbg=NONE        ctermfg=22          guifg=NONE     guibg=NONE
 hi PreProc                  ctermbg=NONE        ctermfg=17          guifg=NONE     guibg=NONE
@@ -37,8 +37,8 @@ hi Identifier               ctermbg=NONE        ctermfg=52          guifg=NONE  
 hi Operator                 ctermbg=NONE        ctermfg=130         guifg=NONE     guibg=NONE
 hi Statement                ctermbg=NONE        ctermfg=61          guifg=NONE     guibg=NONE
 hi Cursor                   ctermbg=224         ctermfg=233         guifg=NONE     guibg=NONE
-hi CursorLine               ctermbg=225         ctermfg=NONE        guifg=NONE     guibg=NONE cterm=none
-hi CursorColumn             ctermbg=225         ctermfg=NONE        guifg=NONE     guibg=NONE 
+hi CursorLine               ctermbg=219         ctermfg=NONE        guifg=NONE     guibg=NONE cterm=none
+hi CursorColumn             ctermbg=219         ctermfg=233         guifg=NONE     guibg=NONE 
 hi LineNr                   ctermbg=217         ctermfg=233         guifg=NONE     guibg=NONE
 hi LineNrAbove              ctermbg=224         ctermfg=233         guifg=NONE     guibg=NONE
 hi LineNrBelow              ctermbg=224         ctermfg=233         guifg=NONE     guibg=NONE
