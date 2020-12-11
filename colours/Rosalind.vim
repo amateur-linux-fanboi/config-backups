@@ -53,6 +53,9 @@ hi Visual                   ctermbg=86          ctermfg=NONE        guifg=NONE  
 hi Error                    ctermbg=196         ctermfg=230         guifg=NONE     guibg=NONE
 hi StatusLine               ctermbg=16          ctermfg=175         guifg=NONE     guibg=NONE term=bold
 hi StatusLineNC             ctermbg=213         ctermfg=240         guifg=NONE     guibg=NONE
+hi TabLine                  ctermbg=16          ctermfg=177         guifg=NONE     guibg=NONE term=bold
+hi TabLineFill              ctermbg=177         ctermfg=16          guifg=NONE     guibg=NONE term=bold
+hi TabLineSel               ctermbg=177         ctermfg=16          guifg=NONE     guibg=NONE term=bold
 
 " Highlight links
 
