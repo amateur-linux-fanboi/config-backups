@@ -24,8 +24,7 @@ font pango:IBM Plex Mono 11
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -e -t --image=/home/raghu/Pictures/Inkscape\ Export/Coffee_Cup_Lappy_Lock_Screen.png
-
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -e -t --image=/home/raghu/Pictures/Flats_Lappy_3D_Lock.png
 
 # MY own lock combo
 bindsym --release $mod+Ctrl+l exec i3lock -e -t --image=/home/raghu/Pictures/ThinkIBM.png
@@ -120,16 +119,16 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 
-set $ws1 "1:더미널" 
-set $ws2 "2:인터넷"
-set $ws3 "3:벤"
-set $ws4 "4:몬서"
-set $ws5 "5:🤷🏿‍♂️"
-set $ws6 "6:📁"
+set $ws1 "1" 
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9:😨"
-set $ws10 "10:😱"
+set $ws9 "9"
+set $ws10 "10"
 
 
 # switch to workspace
@@ -220,14 +219,14 @@ bar {
     strip_workspace_numbers yes
     strip_workspace_name no
 	colors {
-	    background #f7e5e5
+	    background #FFE4E4
 	    statusline #252525
 	    separator  #0034F4
 
-	      focused_workspace  #c1bfbf #f7e5e5 #252525
+	      focused_workspace  #EEDEDE #FFA5C5 #252525
 	      active_workspace   #EEDEDE #8A3324 #252525
-	      inactive_workspace #EEDEDE #434E5C #D8DEE9
-	      urgent_workspace   #EEDEDE #B7093A #252525
+	      inactive_workspace #c1bfbf #f7e5e5 #252525
+	      urgent_workspace   #EEDEDE #B7093A #F7E5E5
 	      binding_mode       #EEDEDE #B7093A #252525
 
   }
@@ -235,7 +234,7 @@ bar {
 
 
 ## Wallpaper
-exec --no-startup-id feh --bg-fill /home/raghu/Pictures/Inkscape\ Export/Coffee\ Mug_2.png
+exec --no-startup-id feh --bg-fill /home/raghu/Pictures/Inkscape\ Export/Flats_Lappy_3D.png
 
 ## Workspace layout default
 workspace_layout default
@@ -244,8 +243,9 @@ workspace_layout default
 
 assign [class="URxvt"]  $ws1
 assign [class="Firefox"]  $ws2
-assign [class="Typora"]  $ws3
+assign [class="Typora|Sublime"]  $ws3
 assign [class="Zathura|Evince"]  $ws4
+assign [class="Nemo"]  $ws6
 assign [class="Spotify Premium"]  $ws9
 
 
