@@ -1,57 +1,71 @@
 xterm*faceName: Iosevka
-xterm*faceSize: 14
+xterm*faceSize: 13
 xterm*renderFont: true
 xterm*termName: xterm-256color
-!TomorrowNight
-#define t_background        #110700
-#define t_current_line      #282a2e
-#define t_selection       #373b41
-#define t_foreground       #c5c8c6
-#define t_comment       #969896
-#define t_red        #cc6666
-#define t_orange       #de935f
-#define t_yellow         #f0c674
-#define t_green          #b5bd68
-#define t_aqua          #8abeb7
-#define t_blue          #81a2be
-#define t_purple         #b294bb
 
+! Prescone
 
-xterm*foreground:   t_foreground
-xterm*background:   t_background
-xterm*cursorColor:  #aeafad
+#define C_current_line		#282a2e
+#define C_selection			#373b41
+#define C_comment			#969896
+
+#define C_red 				#D63950
+#define C_orange			#EF8F4F
+#define C_yellow			#FED766
+#define C_green				#287B47
+#define C_aqua				#33DDDD
+#define C_blue				#5F49FF
+#define C_purple			#BB33FF
+#define C_white             #F6F4F2
+#define C_black             #151515
+
+#define C_light_red 		#DC566A
+#define C_light_orange		#F3AC7C
+#define C_light_yellow		#FECB34
+#define C_light_green		#4DC679
+#define C_light_aqua		#1EAEAE
+#define C_light_blue		#8170FF
+#define C_light_purple		#CF70FF
+#define C_light_white       #F7EBEE
+#define C_light_black       #707070
+
+xterm*foreground:   C_black
+xterm*background:   C_white
+xterm*cursorColor:  #0C4646
 
 ! Black / Grey
-xterm*color0:       #000000
-xterm*color8:       #666666
+xterm*color0:       C_black
+xterm*color8:       C_light_black
 
 ! Red / Bright Red
-xterm*color1:       t_red
-xterm*color9:       #FF3334
+xterm*color1:       C_red
+xterm*color9:       C_light_red
 
 ! Green + Bright Green
-xterm*color2:       t_green
-xterm*color10:      #9ec400
+xterm*color2:       C_green
+xterm*color10:      C_light_green
 
 ! Yellow (Orange) + Bright Yellow (Yellow)
-xterm*color3:       t_orange
-xterm*color11:      t_yellow
+xterm*color3:       C_orange
+xterm*color11:      C_yellow
 
 ! Blue + Bright Blue
-xterm*color4:       t_blue
-xterm*color12:      t_blue
+xterm*color4:       C_blue
+xterm*color12:      C_light_blue
 
 ! Magenta (Purple) + Bright Magenta
-xterm*color5:       t_purple
-xterm*color13:      #b777e0
+xterm*color5:       C_purple
+xterm*color13:      C_light_purple
 
 ! Cyan (Aqua) + Bright Cyan
-xterm*color6:       t_aqua
-xterm*color14:      #54ced6
+xterm*color6:       C_aqua
+xterm*color14:      C_light_aqua
 
 ! Light Grey (Selection) + White (Current Line)
-xterm*color7:       t_selection
-xterm*color15:      t_current_line
+xterm*color7:       C_white
+xterm*color15:      C_light_white
+
+
 
 
 ! Font scaling shortcuts
@@ -62,7 +76,7 @@ xterm*VT100.Translations: #override \
 
 
 !! URxvt Appearance
-URxvt.font: xft:IBM Plex Mono:size=13, xft:Noto Mono:size=13, xft:Noto Color Emoji:size=10
+URxvt.font: xft:IBM Plex Mono:size=13, xft:Noto Mono:size=13, xft:Noto Color Emoji:size=13
 URxvt.boldFont: xft:IBM Plex Mono:size=13
 URxvt.italicFont: xft:IBM Plex Mono:size=13
 URxvt.boldItalicfont: xft:IBM Plex Mono:size=13
@@ -78,94 +92,63 @@ URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
-URxvt.iso14755: true
-
-! Typewriter light
-! Scheme: Typewriter (https://github.com/logico-dev)
-! Based on: Alexandre Gavioli (https://github.com/Alexx2/)
-
-!#define base00 #E7E7EE
-!#define base01 #e3e3e3
-!#define base02 #00BAFF
-!#define base03 #ababab
-!#define base04 #525252
-!#define base05 #262626
-!#define base06 #252525
-!#define base07 #101010
-!#define base08 #7c7c7c
-!#define base09 #999999
-!#define base0A #a0a0a0
-!#define base0B #8e8e8e
-!#define base0C #868686
-!#define base0D #686868
-!#define base0E #747474
-!#define base0F #5e5e5e
-#define base0G #E41D91
-#define base0H #009900
-
-!urxvt.foreground:   base05
-!#ifdef background_opacity
-!urxvt.background:   [background_opacity]base00
-!#else
-!urxvt.background:   base00
-!#endif
-!urxvt.cursorColor:  base02
+URxvt.iso14755: false
 
 ! My own Colours
 
-#define Coo00   #1B1B1B 
-#define Coo01   #CF0101 
-#define Coo02   #00A000 
-#define Coo03   #EFEF01 
-#define Coo04   #000077 
-#define Coo05   #6F096F 
-#define Coo06   #005F8B 
-#define Coo07   #3F3E3E 
-#define Coo08   #292323 
-#define Coo09   #FE2020 
-#define Coo10   #70FF70 
-#define Coo11   #FEFE20 
-#define Coo12   #0999FF 
-#define Coo13   #F478F4 
-#define Coo14   #85D8FF 
-#define Coo15   #7C7979 
+#define Coo00   #101010 
+#define Coo01   #5F0202
+#define Coo02   #004F00 
+#define Coo03   #A32600
+#define Coo04   #000033
+#define Coo05   #1F0033
+#define Coo06   #00343F
+#define Coo07   #505050
+#define Coo08   #202020
+#define Coo09   #9D0202
+#define Coo10   #007300
+#define Coo11   #B34600
+#define Coo12   #000073
+#define Coo13   #3F0053
+#define Coo14   #00545F
+#define Coo15   #707070
 
 
-urxvt.foreground:#1B1B1B
-urxvt.background:#FFF0F0
+urxvt.foreground:#101010
+urxvt.background:#FFEAEA
 urxvt.cursorColor:#DD66AA
 
 ! Black
-urxvt.color0:       Coo08
-urxvt.color8:       Coo00
+urxvt.color0:       Coo00
+urxvt.color8:       Coo08
 
 ! Red
-urxvt.color1:       Coo09
-urxvt.color9:       Coo01
+urxvt.color1:       Coo01
+urxvt.color9:       Coo09
 
 ! Green
-urxvt.color2:       Coo10
-urxvt.color10:      Coo02
+urxvt.color2:       Coo02
+urxvt.color10:      Coo10
 
 ! Yellow
-urxvt.color3:       Coo11
-urxvt.color11:      Coo03
+urxvt.color3:       Coo03
+urxvt.color11:      Coo11
 
 ! Blue
-urxvt.color4:       Coo12
-urxvt.color12:      Coo04
+urxvt.color4:       Coo04
+urxvt.color12:      Coo12
 
 ! Magenta
-urxvt.color5:       Coo13
-urxvt.color13:      Coo05
+urxvt.color5:       Coo05
+urxvt.color13:      Coo13
 
 ! Cyan
-urxvt.color6:       Coo14
-urxvt.color14:      Coo06
+urxvt.color6:       Coo06
+urxvt.color14:      Coo14
 
 ! White
-urxvt.color7:       Coo15
-urxvt.color15:      Coo07
+urxvt.color7:       Coo07
+urxvt.color15:      Coo15
 
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
 ! use 'shell' template to set these if necessary

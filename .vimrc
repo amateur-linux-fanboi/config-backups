@@ -85,6 +85,7 @@ set backspace=indent,eol,start
 " colo typewriter   	" Available at https://github.com/logico/typewriter
 " colo petra    		" Available at https://github.com/mipmip/vim-petra
 colo Rosalind           " Available at https://github.com/amateur-linux-fanboi/config-backups/tree/main/colours
+"colo ayu                " Available at https://github.com/ayu-theme/ayu-vim/tree/master/colors
 
 
 " Switching on syntax highlights
