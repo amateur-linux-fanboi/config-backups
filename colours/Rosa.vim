@@ -59,6 +59,7 @@ hi TabLineSel               ctermbg=NONE         ctermfg=NONE          guifg=#D7
 " Highlight links
 
 hi link SpellRare SpellCap 
+hi link SpellCap MatchParen 
 hi link SpellLocal SpellCap
 hi link IncSearch  Search 
 " Markdown stuff

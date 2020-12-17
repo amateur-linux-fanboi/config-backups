@@ -1,10 +1,10 @@
 " Rosalind Colour scheme by Raghunandan.
-" Version 1.02
+" Version 1.03
 " 
 " 
 " 
 " 
-" Last update: 13 December 2020 
+" Last update: 17 December 2020 
 " 
 " 
 
@@ -47,6 +47,7 @@ hi MatchParen               ctermbg=87          ctermfg=233         guifg=NONE  
 hi Search                   ctermbg=90          ctermfg=225         guifg=#FFEAEA     guibg=#470047
 hi SpellBad                 ctermbg=238         ctermfg=231         guifg=#F0F0F0     guibg=#404040 cterm=underline gui=none
 hi SpellCap                 ctermbg=219         ctermfg=9           guifg=#E51010     guibg=#DD9296 gui=underline
+hi SpellLocal               ctermbg=219         ctermfg=9           guifg=#E51010     guibg=#DD9296 gui=underline
 hi Visual                   ctermbg=86          ctermfg=NONE        guifg=NONE     guibg=#1FDADA
 hi Error                    ctermbg=196         ctermfg=230         guifg=NONE     guibg=NONE
 hi StatusLine               ctermbg=16          ctermfg=175         guifg=#E797BF     guibg=#500550 term=bold gui=bold
@@ -57,8 +58,6 @@ hi TabLineSel               ctermbg=177         ctermfg=16          guifg=#D787F
 
 " Highlight links
 
-hi link SpellRare SpellCap 
-hi link SpellLocal SpellCap
 hi link IncSearch  Search 
 " Markdown stuff
 
