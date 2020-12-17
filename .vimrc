@@ -28,6 +28,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set linebreak
 
 " For convenient search
 set incsearch
@@ -37,12 +38,24 @@ set ignorecase
 set cursorline
 set cursorcolumn
 
+" Managing Splits
+set splitright
+set splitbelow
+"" Options for Gvim
+"set guioptions -=m "Disables the menu bar
+"set guioptions -=T "Disables the tool bar
+"set guioptions -=L "Disables the scrollbar(left side)
+"set guioptions -=r "Disables the scrollbar(right side)
+"" Both the above options are to make gvim look like the terminal based vim
+"" This is to retain the look of terminal-based vim,
+"" while having the tiny modifications to the aesthetics that gvim provides.
+
 " Colours setup
 set background=light
 set t_Co=256
 
 " To keep the caret centered while editing
-:set scrolloff=10
+:set scrolloff=20
 nnoremap j gj
 nnoremap k gk
 
@@ -84,8 +97,9 @@ set backspace=indent,eol,start
 " colo envy      		" Available at https://github.com/kkga/vim-envy
 " colo typewriter   	" Available at https://github.com/logico/typewriter
 " colo petra    		" Available at https://github.com/mipmip/vim-petra
-colo Rosalind           " Available at https://github.com/amateur-linux-fanboi/config-backups/tree/main/colours
-"colo ayu                " Available at https://github.com/ayu-theme/ayu-vim/tree/master/colors
+colo Rosalind          " Available at https://github.com/amateur-linux-fanboi/config-backups/tree/main/colours
+"colo Rosa               " Available at https://github.com/amateur-linux-fanboi/config-backups/tree/main/colours
+"colo ayu               " Available at https://github.com/ayu-theme/ayu-vim/tree/master/colors
 
 
 " Switching on syntax highlights
